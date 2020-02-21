@@ -45,9 +45,12 @@ RUN conda install -y -c pytorch \
     cuda80=1.0 \
     magma-cuda80=2.3.0 \
     pytorch=0.3.0 \
-    cudatoolkit=8.0-3 \
     torchvision=0.2.0 \
     && conda clean -ya
+    
+RUN sudo dpkg -i cuda-repo-ubuntu1604_8.0.44-1_amd64.deb \
+    sudo apt-get update \
+    sudo apt-get install cuda-toolkit-8-0 \
 
 # Install HDF5 Python bindings
 RUN conda install -y h5py=2.8.0 \
