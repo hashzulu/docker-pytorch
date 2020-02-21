@@ -74,7 +74,7 @@ RUN conda install -y requests=2.19.1 \
 RUN conda install -c conda-forge tensorboardx
 
 # Install Graphviz
-RUN conda install -y graphviz=2.38.0 \
+RUN conda install -y graphviz-python \
     && conda clean -ya
 RUN pip install graphviz==0.8.4
 
