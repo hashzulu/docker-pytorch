@@ -44,7 +44,7 @@ ENV PATH=$CONDA_PREFIX/bin:$PATH
 RUN conda install -y -c pytorch \
     cuda80=1.0 \
     magma-cuda80=2.3.0 \
-    pytorch=0.3.0
+    pytorch=0.3.0 \
     cudatoolkit=8.0-3 \
     torchvision=0.2.0 \
     && conda clean -ya
