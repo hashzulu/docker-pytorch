@@ -69,6 +69,9 @@ RUN pip install torchnet==0.0.4
 # Install Requests, a Python library for making HTTP requests
 RUN conda install -y requests=2.19.1 \
     && conda clean -ya
+    
+# Install TensorboardX
+RUN conda install -c conda-forge tensorboardx
 
 # Install Graphviz
 RUN conda install -y graphviz=2.38.0 \
