@@ -44,8 +44,8 @@ ENV PATH=$CONDA_PREFIX/bin:$PATH
 RUN conda install -y -c pytorch \
     cuda80=1.0 \
     magma-cuda80=2.3.0 \
-    "pytorch=1.0.0=py3.6_cuda8.0.61_cudnn7.1.2_1" \
-    torchvision=0.2.1 \
+    "pytorch=0.3.0=py3.6_cuda8.0.61_cudnn7.1.2_1" \
+    torchvision=0.2.0 \
     && conda clean -ya
 
 # Install HDF5 Python bindings
